@@ -75,7 +75,7 @@ The refactored macro only read through the stock data once, taking an average of
     Next i
 ```
 
-![Refactored macro time - 2017](resources/VBA_challenge_2017.png) !Refactored macro time - 2018](resources/VBA_challenge_2018.png)
+![Refactored macro time - 2017](resources/VBA_Challenge_2017.png) !Refactored macro time - 2018](resources/VBA_Challenge_2018.png)
 
 ## Summary
 
