@@ -10,7 +10,7 @@ The purpose of this challenge was to refactor a stock analysis macro and then me
 
 The original macro looped through the stock data once per ticker symbol for a total of 12 times, taking an average of 0.680 seconds to run.
 
-'''VBA
+```VBA
    For i = 0 To 11
        ticker = tickers(i)
        totalVolume = 0
@@ -38,15 +38,15 @@ The original macro looped through the stock data once per ticker symbol for a to
        Cells(4 + i, 2).Value = totalVolume
        Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
     Next i
-'''
+```
 
-![Old macro time - 2017](resources/green_stocks_2017) ![Old macro time - 2018](resources/green_stocks_2018)
+![Old macro time - 2017](resources/green_stocks_2017.png) ![Old macro time - 2018](resources/green_stocks_2018.png)
 
 ### Refactored Performance
 
 The refactored macro only read through the stock data once, taking an average of 0.0547 seconds to run.
 
-'''VBA
+```VBA
     '2b) Loop over all the rows in the spreadsheet.
     For i = 2 To RowCount
     
@@ -73,9 +73,9 @@ The refactored macro only read through the stock data once, taking an average of
         Cells(4 + i, 2).Value = tickerVolumes(i)
         Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
     Next i
-'''
+```
 
-![Refactored macro time - 2017](resources/VBA_challenge_2017) !Refactored macro time - 2018](resources/VBA_challenge_2018)
+![Refactored macro time - 2017](resources/VBA_challenge_2017.png) !Refactored macro time - 2018](resources/VBA_challenge_2018.png)
 
 ## Summary
 
